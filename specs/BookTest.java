@@ -117,4 +117,14 @@ public class BookTest {
     assertEquals( 1, total );
   }
 
+  @Test
+  public void canDeleteByName() {
+    book.addAddress( me2 );
+    book.addAddress( sp );
+    book.addAddress( sp2 );
+    book.addAddress( me );
+    book.deleteAddressByName( "Euan" );
+    assertEquals( 3, book.addressCount() );
+  }
+
 }

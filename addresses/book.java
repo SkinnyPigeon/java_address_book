@@ -79,6 +79,16 @@ public class Book {
     }
   }
 
+  public void deleteAddressByName( String name ) {
+    int indexCount = this.addresses.size();
+    for( int i = 0; i < indexCount; i++ ) {
+      if( this.addresses.get(i).getName() == name ) {
+        this.addresses.remove(i);
+        return;
+      }
+    }
+  }
+
 
 
 }
