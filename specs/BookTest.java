@@ -31,12 +31,6 @@ public class BookTest {
   }
 
   @Test
-  public void canTellIfClassIsPersonal() {
-    book.addAddress( me );
-    assertEquals( "Personal", book.getFirstPlaceClass() );
-  }
-
-  @Test
   public void personalListStartAsEmpty() {
     assertEquals( 0, book.personalCount() );
   }

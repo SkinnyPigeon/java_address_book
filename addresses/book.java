@@ -22,14 +22,6 @@ public class Book {
     return this.addresses.size();
   }
 
-  public String getFirstPlaceClass() {
-    String type = this.addresses.get( 0 ).getTheType();
-      if( type == "Personal" ) {
-        return "Personal";
-    }
-    return "Unknown";
-  }
-
   public void sortIntoTypes() {
     for( int i = 0; i < this.addresses.size(); i++ ) {
       String type = this.addresses.get( i ).getTheType();
