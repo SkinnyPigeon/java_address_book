@@ -7,13 +7,17 @@ import addresses.*;
 public class BookTest {
 
   Personal me;
+  Personal me2;
   Business sp;
+  Business sp2;
   Book book;
 
   @Before
   public void before() {
     me = new Personal( "Euan", "17/6 Uppper Grove Place", "07540309150" );
+    me2 = new Personal( "Dave", "123 Fake Street", "0127391879" );
     sp = new Business( "Skinny Pigeon", "17/6 Uppper Grove Place", "07540309150" );
+    sp2 = new Business( "Pinny Skigeon", "17/6 Uppper Grove Place", "07540309150" );
     book = new Book();
   }
 
@@ -82,6 +86,26 @@ public class BookTest {
     book.sortMainAddressesByName();
     String name = book.getAddress(0).getName();
     assertEquals( "Euan", name );
+  }
+
+  @Test
+  public void canSortTheNamesAlphabeticallyOfThePersonalAccounts() {
+    book.addAddress( me );
+    book.addAddress( me2 );
+    book.sortIntoTypes();
+    book.sortPersonalAddressesByName();
+    String name = book.getPersonalAddress(0).getName();
+    assertEquals( "Dave", name );
+  }
+
+  @Test
+  public void canSortTheNamesAlphabeticallyOfTheBusinessAccounts() {
+    book.addAddress( sp );
+    book.addAddress( sp2 );
+    book.sortIntoTypes();
+    book.sortBusinessAddressesByName();
+    String name = book.getBusinessAddress(0).getName();
+    assertEquals( "Pinny Skigeon", name );
   }
 
 }

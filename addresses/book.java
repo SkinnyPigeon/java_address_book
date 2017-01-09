@@ -26,8 +26,32 @@ public class Book {
     return this.addresses.get( arrayIndex );
   }
 
+  public Address getPersonalAddress( int arrayIndex ) {
+    return this.personal.get( arrayIndex );
+  }
+
+  public Address getBusinessAddress( int arrayIndex ) {
+    return this.business.get( arrayIndex );
+  }
+
   public void sortMainAddressesByName() {
     Collections.sort(this.addresses, new Comparator<Address>() {
+        public int compare(Address nameOne, Address nameTwo) {
+            return nameOne.getName().compareTo(nameTwo.getName());
+        }
+    });
+  }
+
+  public void sortPersonalAddressesByName() {
+    Collections.sort(this.personal, new Comparator<Address>() {
+        public int compare(Address nameOne, Address nameTwo) {
+            return nameOne.getName().compareTo(nameTwo.getName());
+        }
+    });
+  }
+
+  public void sortBusinessAddressesByName() {
+    Collections.sort(this.business, new Comparator<Address>() {
         public int compare(Address nameOne, Address nameTwo) {
             return nameOne.getName().compareTo(nameTwo.getName());
         }
