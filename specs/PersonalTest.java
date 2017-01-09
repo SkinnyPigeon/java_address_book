@@ -27,4 +27,9 @@ public class PersonalTest {
     assertEquals( "07540309150", me.getPhoneNumber() );
   }
 
+  @Test
+  public void hasType() {
+    assertEquals( "Personal", me.getTheType() );
+  }
+
 }

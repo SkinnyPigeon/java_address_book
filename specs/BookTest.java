@@ -30,4 +30,10 @@ public class BookTest {
     assertEquals( 1, count );
   }
 
+  // @Test
+  // public void canTellIfClassIsPersonal() {
+  //   book.addAddress( me );
+  //   assertEquals( "Personal", book.getFirstPlaceClass() );
+  // }
+
 }

@@ -1,4 +1,5 @@
 package addresses;
+import addresses.*;
 import java.util.*;
 
 public class Book {
@@ -16,5 +17,13 @@ public class Book {
   public int addressCount() {
     return this.addresses.size();
   }
+
+  // public String getFirstPlaceClass() {
+  //   // for( int i = 0; i < this.addresses.size() - 1; i++ ) {
+  //     if( this.addresses.get( 0 ).getTypeOfClass == Personal ) {
+  //       return "Personal";
+  //     // }
+  //   }
+  // }
 
 }
