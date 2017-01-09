@@ -23,4 +23,11 @@ public class BookTest {
     assertEquals( 1, count );
   }
 
+  @Test
+  public void bookCanAddBusiness() {
+    book.addAddress( sp );
+    int count = book.addressCount();
+    assertEquals( 1, count );
+  }
+
 }
