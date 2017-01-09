@@ -135,4 +135,11 @@ public class BookTest {
     assertEquals( "5353 Street Road", address );
   }
 
+  @Test
+  public void listsAreUpdatedAfterEdit() {
+    book.addAddress( me );
+    book.editAddressByName( "Euan", "5353 Street Road" );
+    assertEquals( 1, book.personalCount() );
+  }
+
 }
