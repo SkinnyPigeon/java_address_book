@@ -6,6 +6,6 @@ public interface Address {
 
   public String getAddress();
 
-  // public String getPhoneNumber();
+  public String getPhoneNumber();
 
 }
