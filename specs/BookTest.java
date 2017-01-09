@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 import org.junit.*;
+import java.util.*;
 
 import addresses.*;
 
@@ -64,6 +65,23 @@ public class BookTest {
     book.addAddress( sp );
     book.sortIntoTypes();
     assertEquals( 1, book.businessCount() );
+  }
+
+  @Test
+  public void addressBookIsBuiltInOrderOfAddition() {
+    book.addAddress( sp );
+    book.addAddress( me );
+    String name = book.getAddress(0).getName();
+    assertEquals( "Skinny Pigeon", name );
+  }
+
+  @Test
+  public void canSortTheNamesAlphabetically() {
+    book.addAddress( sp );
+    book.addAddress( me );
+    book.sortMainAddressesByName();
+    String name = book.getAddress(0).getName();
+    assertEquals( "Euan", name );
   }
 
 }

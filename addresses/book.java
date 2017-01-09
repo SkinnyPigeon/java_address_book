@@ -22,6 +22,18 @@ public class Book {
     return this.addresses.size();
   }
 
+  public Address getAddress( int arrayIndex ) {
+    return this.addresses.get( arrayIndex );
+  }
+
+  public void sortMainAddressesByName() {
+    Collections.sort(this.addresses, new Comparator<Address>() {
+        public int compare(Address nameOne, Address nameTwo) {
+            return nameOne.getName().compareTo(nameTwo.getName());
+        }
+    });
+  }
+
   public void sortIntoTypes() {
     for( int i = 0; i < this.addresses.size(); i++ ) {
       String type = this.addresses.get( i ).getTheType();
