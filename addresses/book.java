@@ -6,10 +6,12 @@ public class Book {
 
   private ArrayList< Address > addresses;
   private ArrayList< Address > personal;
+  private ArrayList< Address > business;
 
   public Book() {
     this.addresses = new ArrayList< Address >();
     this.personal = new ArrayList< Address >();
+    this.business = new ArrayList< Address >();
   }
 
   public void addAddress( Address address ) {
@@ -33,12 +35,18 @@ public class Book {
       String type = this.addresses.get( i ).getTheType();
       if( type == "Personal" ) {
         this.personal.add( this.addresses.get( i ));
+      } else {
+        this.business.add( this.addresses.get( i ));
       }
     }
   }
 
   public int personalCount() {
     return this.personal.size();
+  }
+
+  public int businessCount() {
+    return this.business.size();
   }
 
 }

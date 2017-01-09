@@ -44,6 +44,7 @@ public class BookTest {
   @Test
   public void personalListCanAddPerson() {
     book.addAddress( me );
+    book.addAddress( sp );
     book.sortIntoTypes();
     assertEquals( 1, book.personalCount() );
   }
@@ -61,6 +62,14 @@ public class BookTest {
     book.addAddress( sp );
     book.sortIntoTypes();
     assertEquals( 2, book.addressCount() );
+  }
+
+  @Test
+  public void businessListCanAddBusiness() {
+    book.addAddress( me );
+    book.addAddress( sp );
+    book.sortIntoTypes();
+    assertEquals( 1, book.businessCount() );
   }
 
 }
