@@ -55,4 +55,12 @@ public class BookTest {
     assertEquals( 0, book.personalCount() );
   }
 
+  @Test
+  public void originalListIsLeftUntouchedByTheSort() {
+    book.addAddress( me );
+    book.addAddress( sp );
+    book.sortIntoTypes();
+    assertEquals( 2, book.addressCount() );
+  }
+
 }
