@@ -22,6 +22,14 @@ public class Book {
     return this.addresses.size();
   }
 
+  public int personalCount() {
+    return this.personal.size();
+  }
+
+  public int businessCount() {
+    return this.business.size();
+  }
+
   public Address getAddress( int arrayIndex ) {
     return this.addresses.get( arrayIndex );
   }
@@ -59,6 +67,8 @@ public class Book {
   }
 
   public void sortIntoTypes() {
+    this.personal.clear();
+    this.business.clear();
     for( int i = 0; i < this.addresses.size(); i++ ) {
       String type = this.addresses.get( i ).getTheType();
       if( type == "Personal" ) {
@@ -69,12 +79,6 @@ public class Book {
     }
   }
 
-  public int personalCount() {
-    return this.personal.size();
-  }
 
-  public int businessCount() {
-    return this.business.size();
-  }
 
 }

@@ -108,4 +108,13 @@ public class BookTest {
     assertEquals( "Pinny Skigeon", name );
   }
 
+  @Test
+  public void checkingToSeeIfSortingDoublesTheNumberOfAdditions() {
+    book.addAddress( me );
+    book.sortIntoTypes();
+    book.sortIntoTypes();
+    int total = book.personalCount();
+    assertEquals( 1, total );
+  }
+
 }
