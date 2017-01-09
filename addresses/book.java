@@ -96,6 +96,7 @@ public class Book {
         this.addresses.get(i).editTheAddress( newAddress );
       }
     }
+    sortIntoTypes();
   }
 
 
