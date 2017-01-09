@@ -89,6 +89,15 @@ public class Book {
     }
   }
 
+  public void editAddressByName( String name, String newAddress ) {
+    int indexCount = this.addresses.size();
+    for( int i = 0; i < indexCount; i++ ) {
+      if( this.addresses.get(i).getName() == name ) {
+        this.addresses.get(i).editTheAddress( newAddress );
+      }
+    }
+  }
+
 
 
 }

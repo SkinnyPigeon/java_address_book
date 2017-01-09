@@ -127,4 +127,12 @@ public class BookTest {
     assertEquals( 3, book.addressCount() );
   }
 
+  @Test
+  public void canEditAddressByName() {
+    book.addAddress( me );
+    book.editAddressByName( "Euan", "5353 Street Road" );
+    String address = book.getAddress(0).getAddress();
+    assertEquals( "5353 Street Road", address );
+  }
+
 }

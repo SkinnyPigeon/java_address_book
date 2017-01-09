@@ -10,4 +10,6 @@ public interface Address {
 
   public String getTheType();
 
+  public void editTheAddress( String newAddress );
+
 }

@@ -29,5 +29,9 @@ public class Business implements Address {
   public String getPhoneNumber() {
     return this.phoneNumber;
   }
+
+  public void editTheAddress( String newAddress ) {
+    this.address = newAddress;
+  }
   
 }
