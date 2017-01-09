@@ -1,7 +1,7 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.*;
 
-import Book.*;
+import addresses.*;
 
 public class PersonalTest {
 

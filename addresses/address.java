@@ -1,4 +1,4 @@
-package Book;
+package addresses;
 
 public interface Address {
 
