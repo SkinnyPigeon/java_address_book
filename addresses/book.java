@@ -38,7 +38,7 @@ public class Book {
   }
 
   public int personalCount() {
-    return this.addresses.size();
+    return this.personal.size();
   }
 
 }

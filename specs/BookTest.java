@@ -48,4 +48,11 @@ public class BookTest {
     assertEquals( 1, book.personalCount() );
   }
 
+  @Test
+  public void personalListWillNotTakeBusiness() {
+    book.addAddress( sp );
+    book.sortIntoTypes();
+    assertEquals( 0, book.personalCount() );
+  }
+
 }
