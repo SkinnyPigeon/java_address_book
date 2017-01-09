@@ -8,4 +8,6 @@ public interface Address {
 
   public String getPhoneNumber();
 
+  public String getTheType();
+
 }

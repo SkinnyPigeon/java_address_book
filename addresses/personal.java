@@ -29,9 +29,5 @@ public class Personal implements Address {
   public String getPhoneNumber() {
     return this.phoneNumber;
   }
-
-  public Class getTypeOfClass() {
-    return this.getClass();
-  }
   
 }

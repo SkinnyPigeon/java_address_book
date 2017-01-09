@@ -18,12 +18,12 @@ public class Book {
     return this.addresses.size();
   }
 
-  // public String getFirstPlaceClass() {
-  //   // for( int i = 0; i < this.addresses.size() - 1; i++ ) {
-  //     if( this.addresses.get( 0 ).getTypeOfClass == Personal ) {
-  //       return "Personal";
-  //     // }
-  //   }
-  // }
+  public String getFirstPlaceClass() {
+    String type = this.addresses.get( 0 ).getTheType();
+      if( type == "Personal" ) {
+        return "Personal";
+    }
+    return "Unknown";
+  }
 
 }
