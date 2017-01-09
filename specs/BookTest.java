@@ -1,4 +1,4 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import org.junit.*;
 
 import addresses.*;
@@ -34,6 +34,18 @@ public class BookTest {
   public void canTellIfClassIsPersonal() {
     book.addAddress( me );
     assertEquals( "Personal", book.getFirstPlaceClass() );
+  }
+
+  @Test
+  public void personalListStartAsEmpty() {
+    assertEquals( 0, book.personalCount() );
+  }
+
+  @Test
+  public void personalListCanAddPerson() {
+    book.addAddress( me );
+    book.sortIntoTypes();
+    assertEquals( 1, book.personalCount() );
   }
 
 }

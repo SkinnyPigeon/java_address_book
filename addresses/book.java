@@ -5,9 +5,11 @@ import java.util.*;
 public class Book {
 
   private ArrayList< Address > addresses;
+  private ArrayList< Address > personal;
 
   public Book() {
     this.addresses = new ArrayList< Address >();
+    this.personal = new ArrayList< Address >();
   }
 
   public void addAddress( Address address ) {
@@ -24,6 +26,19 @@ public class Book {
         return "Personal";
     }
     return "Unknown";
+  }
+
+  public void sortIntoTypes() {
+    for( int i = 0; i < this.addresses.size(); i++ ) {
+      String type = this.addresses.get( i ).getTheType();
+      if( type == "Personal" ) {
+        this.personal.add( this.addresses.get( i ));
+      }
+    }
+  }
+
+  public int personalCount() {
+    return this.addresses.size();
   }
 
 }
